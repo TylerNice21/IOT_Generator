@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>IOT Template Generator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	
+	<body id="top">
+	
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="https://www.Rowan.edu" target="_blank" class="image avatar"><img src="images/rowansymbol2.png" alt="" /></a>
+					<h1>Welcome to the <br /><strong>Internet of Things</strong> <br />template generator.<br /></h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<center><h2><strong>Rowan University: Internet of Things</strong></h2></center>
+						</header>
+						<ul class="actions">
+							<center><li><a href="https://academics.rowan.edu/engineering/programs/electricalcomputer/index.html" target="_blank" class="button">Learn More</a></li></center>
+						</ul>
+					</section>
+
+				<!-- two -->
+					<section id="two">
+						<center><h2>IOT Template Generator</h2></center>
+						<div class="row">
+							<div class="12u$">
+								<form id="form1" method="post" action="IOT_Generator_Output.xml">
+									<div class="row uniform 50%">
+										<div class="12u$"><input type="text" name="ManufacturerID" id="ManufacturerID" placeholder="ManufacturerID" /></div>
+										<div class="12u$"><input type="text" name="ModelNumber" id="ModelNumber" placeholder="ModelNumber" /></div>
+										<div class="12u$"><input type="text" name="VersionLetter" id="VersionLetter" placeholder="VersionLetter"></div>
+										<div class="12u$"><input type="text" name="VersionNumber" id="VersionNumber" placeholder="VersionNumber"></div>
+										<div class="12u$"><input type="text" name="SerialNumber" id="SerialNumber" placeholder="SerialNumber"></div>
+										<div class="12u$"><input type="text" name="TemplateID" id="TemplateID" placeholder="TemplateID"></div>
+										<div class="12u$"><input type="text" name="MinTemp" id="MinTemp" placeholder="MinTemp"></div>
+										<div class="12u$"><input type="text" name="MaxTemp" id="MaxTemp" placeholder="MaxTemp"></div>
+										<div class="12u$"><input type="text" name="MinResistance" id="MinResistance" placeholder="MinResistance"></div>
+										<div class="12u$"><input type="text" name="MaxResistance" id="MaxResistance" placeholder="MaxResistance"></div>
+										<div class="12u$"><input type="text" name="Resistance0C" id="Resistance0C" placeholder="Resistance0C"></div>
+										<div class="12u$"><input type="text" name="CoefficientA" id="CoefficientA" placeholder="CoefficientA"></div>
+										<div class="12u$"><input type="text" name="CoefficientB" id="CoefficientB" placeholder="CoefficientB"></div>
+										<div class="12u$"><input type="text" name="CoefficientC" id="CoefficientC" placeholder="CoefficientC"></div>
+										<div class="12u$"><input type="text" name="ResponseTime" id="ResponseTime" placeholder="ResponseTime"></div>
+										<div class="12u$"><input type="text" name="Current" id="Current" placeholder="Current"></div>
+										<div class="12u$"><input type="text" name="MaxCurrent" id="MaxCurrent" placeholder="MaxCurrent"></div>
+										<div class="12u$"><input type="text" name="SelfHeat" id="SelfHeat" placeholder="SelfHeat"></div>
+										<div class="12u$"><input type="text" name="CalDate" id="CalDate" placeholder="CalDate"></div>
+										<div class="12u$"><input type="text" name="CalInit" id="CalInit" placeholder="CalInit"></div>
+										<div class="12u$"><input type="text" name="CalPer" id="CalPer" placeholder="CalPer"></div>
+										<div class="12u$"><input type="text" name="LocationID" id="LocationID" placeholder="LocationID"></div>
+                                        <div class="12u$"><center><input type="button" name="Generate" id="Generate" value="Generate"></center></div>
+                                    </div>
+								</form>
+							</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://www.LinkedIN.com" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIN</span></a></li>
+						<li><a href="https://www.Github.com" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.Facebook.com" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.Twitter.com" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.Instagram.com" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Nice Designs</li><li>HTML5 UP</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/index.js"></script>
+
+<script>
+    //Initialize the created file to download
+    function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+    }
+
+    //Create file to be download
+    document.getElementById("Generate").addEventListener("click", function () {
+
+        var ManufacturerID = document.getElementById("ManufacturerID").value
+        var ModelNumber = document.getElementById("ModelNumber").value;
+        var VersionLetter = document.getElementById("VersionLetter").value;
+        var VersionNumber = document.getElementById("VersionNumber").value;
+        var SerialNumber = document.getElementById("SerialNumber").value;
+        var TemplateID = document.getElementById("TemplateID").value;
+        var MinTemp = document.getElementById("MinTemp").value;
+        var MaxTemp = document.getElementById("MaxTemp").value;
+        var MinResistance = document.getElementById("MinResistance").value;
+        var MaxResistance = document.getElementById("MaxResistance").value;
+        var Resistance0C = document.getElementById("Resistance0C").value;
+        var CoefficientA = document.getElementById("CoefficientA").value;
+        var CoefficientB = document.getElementById("CoefficientB").value;
+        var CoefficientC = document.getElementById("CoefficientC").value;
+        var ResponseTime = document.getElementById("ResponseTime").value;
+        var Current = document.getElementById("Current").value;
+        var MaxCurrent = document.getElementById("MaxCurrent").value;
+        var SelfHeat = document.getElementById("SelfHeat").value;
+        var CalDate = document.getElementById("CalDate").value;
+        var CalInit = document.getElementById("CalInit").value;
+        var CalPer = document.getElementById("CalPer").value;
+        var LocationID = document.getElementById("LocationID").value;
+
+        var text = "<Form>" + "\n" +
+                   "<ManufacturerID>" + ManufacturerID + "</ManufacturerID>" + "\n" + "<ModelNumber>" + ModelNumber + "</ModelNumber>" + "\n" +
+                   "<VersionLetter>" + VersionLetter + "</VersionLetter>" + "\n" + "<VersionNumber>" + VersionNumber + "</VersionNumber>" + "\n" +
+                   "<SerialNumber>" + SerialNumber + "</SerialNumber>" + "\n" + "<TemplateID>" + TemplateID + "</TemplateID>" + "\n" +
+                   "<MinTemp>" + MinTemp + "</MinTemp>" + "\n" + "<MaxTemp>" + MaxTemp + "</MaxTemp>" + "\n" +
+                   "<MinResistance>" + MinResistance + "</MinResistance>" + "\n" + "<MaxResistance>" + MaxResistance + "</MaxResistance>" + "\n" +
+                   "<Resistance0C>" + Resistance0C + "</Resistance0C>" + "\n" + "<CoefficientA>" + CoefficientA + "</CoefficientA>" + "\n" +
+                   "<CoefficientB>" + CoefficientB + "</CoefficientB>" + "\n" + "<CoefficientC>" + CoefficientC + "</CoefficientC>" + "\n" +
+                   "<ResponseTime>" + ResponseTime + "</ResponseTime>" + "\n" + "<Current>" + Current + "</Current>" + "\n" +
+                   "<MaxCurrent>" + MaxCurrent + "</MaxCurrent>" + "\n" + "<SelfHeat>" + SelfHeat + "</SelfHeat>" + "\n" +
+                   "<CalDate>" + CalDate + "</CalDate>" + "\n" + "<CalInit>" + CalInit + "</CalInit>" + "\n" +
+                   "<CalPer>" + CalPer + "</CalPer>" + "\n" + "<LocationID>" + LocationID + "</LocationID>" + "\n" +
+                   "</Form>";
+
+        var filename = "IOT_Generator_Output.xml";
+
+        //Download created file
+        download(filename, text);
+    }, false);
+</script>
+
+	</body>
+</html>
